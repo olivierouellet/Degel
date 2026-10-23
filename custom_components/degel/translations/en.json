@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Thaw period in Québec",
+        "description": "Choose the thaw zones to follow (périodes de dégel, Transports Québec). When your Home Assistant home location is in a zone, that zone is preselected. The *Thaw season* sensor turns on some days before the first period starts and stays on until some days after the last one ends: use it to show a card only around the thaw.",
+        "data": {
+          "zones": "Zones",
+          "days_before": "Days before the start",
+          "days_after": "Days after the end"
+        },
+        "data_description": {
+          "days_before": "The Thaw season sensor turns on this many days before a period starts.",
+          "days_after": "It stays on this many days after the period ends."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the Transports Québec service. Try again later.",
+      "no_zone": "Choose at least one zone."
+    },
+    "abort": {
+      "single_instance_allowed": "Dégel is already set up. Use Configure to change the zones."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Thaw period options",
+        "description": "Changing the zones adds or removes their sensors; the Thaw season sensor keeps its ID.",
+        "data": {
+          "zones": "Zones",
+          "days_before": "Days before the start",
+          "days_after": "Days after the end"
+        },
+        "data_description": {
+          "days_before": "The Thaw season sensor turns on this many days before a period starts.",
+          "days_after": "It stays on this many days after the period ends."
+        }
+      }
+    },
+    "error": {
+      "no_zone": "Choose at least one zone."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "season": {
+        "name": "Thaw season"
+      },
+      "thaw_period": {
+        "name": "Zone {zone} thaw period",
+        "state_attributes": {
+          "status": {
+            "name": "Status",
+            "state": {
+              "upcoming": "Upcoming",
+              "active": "In effect",
+              "ended": "Ended"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "start": {
+        "name": "Zone {zone} thaw start"
+      },
+      "end": {
+        "name": "Zone {zone} thaw end"
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "1": "Zone 1 · Southern Québec",
+        "2": "Zone 2 · Central Québec",
+        "3": "Zone 3 · Northern Québec"
+      }
+    }
+  }
+}
