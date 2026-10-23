@@ -1,0 +1,4 @@
+﻿zone,num_zone,nom_partie_zone,dat_debut_zone,dat_fin_zone,dat_maj,objectid
+Zone 1,1,Partie sud du Québec,2026-03-16  00h01,2026-05-15  23h59,2022/03/04,1
+Zone 2,2,Partie médiane du Québec,2026-04-13  00h01,2026-05-22  23h59,2022/03/04,2
+Zone 3,3,Partie nord du Québec,2026-04-20  00h01,2026-05-29  23h59,2022/03/04,3
