@@ -1,0 +1,60 @@
+name: Bogue · Bug report
+description: Quelque chose ne fonctionne pas comme prévu. · Something doesn't work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Écrivez en français ou en anglais. · Write in French or English.
+
+        Si le problème touche la sécurité, fermez ce formulaire et suivez plutôt
+        [SECURITY.md](https://github.com/olivierouellet/Degel/blob/main/SECURITY.md).
+        · If the bug has a security side, close this and use SECURITY.md instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ce qui s’est passé · What happened
+      description: Ce que vous avez fait, ce que vous avez vu, et ce que vous attendiez. · What you did, what you saw, and what you expected.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: zones
+    attributes:
+      label: Zones suivies · Followed zones
+      multiple: true
+      options:
+        - Zone 1
+        - Zone 2
+        - Zone 3
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: Dégel et Home Assistant. · Dégel and Home Assistant.
+      placeholder: Dégel 1.0.0, Home Assistant 2026.10.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Journaux · Logs
+      description: >
+        Paramètres → Système → Journaux, filtrés sur « degel ». ·
+        Settings → System → Logs, filtered on "degel".
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Avant d’envoyer · Before submitting
+      options:
+        - label: Ce n’est pas un problème de sécurité. · This is not a security issue.
+          required: true

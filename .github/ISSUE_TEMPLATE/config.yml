@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnérabilité de sécurité · Security vulnerability
+    url: https://github.com/olivierouellet/Degel/security/advisories/new
+    about: N’ouvrez pas d’issue publique; signalez-la ici en privé (voir SECURITY.md). · Don't open a public issue; report it privately here (see SECURITY.md).
+  - name: Problème avec la carte · Problem with the card
+    url: https://github.com/olivierouellet/Degel-Carte/issues
+    about: La carte de tableau de bord a son propre dépôt. · The dashboard card has its own repository.
+  - name: Dates officielles · Official dates
+    url: https://www.transports.gouv.qc.ca/fr/entreprises-partenaires/ent-camionnage/degel/Pages/Periode-de-degel.aspx
+    about: Les dates viennent de Transports Québec; Dégel ne fait que les afficher. · The dates come from Transports Québec; Dégel only shows them.
